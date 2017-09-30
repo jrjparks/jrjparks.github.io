@@ -1,0 +1,23 @@
+.page {
+  display: grid;
+  grid-template-areas: "header" "view" "footer";
+  grid-template-columns: auto;
+  grid-template-rows: 46px 1fr 30px;
+  height: 100%;
+  width: 100%;
+
+  header {
+    grid-area: header;
+  }
+
+  .view {
+    grid-area: view;
+    overflow: auto;
+    padding: 0 20%;
+  }
+
+  footer {
+    @include palette();
+    grid-area: footer;
+  }
+}

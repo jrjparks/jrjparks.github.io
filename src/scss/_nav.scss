@@ -1,0 +1,63 @@
+@import 'palette';
+@import 'typography';
+
+nav {
+  @include palette('primary');
+  display: grid;
+  grid-template-columns: 60px auto;
+  grid-template-rows: auto;
+  grid-template-areas: 'icon navbar';
+  height: 100%;
+
+  & > ul {
+    grid-area: navbar;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+
+    & > li {
+      float: left;
+      height: 100%;
+
+      & > a {
+        @include palette('primary');
+        @include font(bold);
+        height: 100%;
+        display: block;
+        text-align: center;
+        padding: 14px 32px;
+        text-decoration: none;
+        box-shadow: none;
+        transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+
+        &:visited {
+          @include palette('primary');
+        }
+
+        &.active {
+          @include palette('secondary');
+
+          &:hover {
+            @include palette('secondary-light');
+          }
+
+          &:active {
+            @include palette('secondary-light');
+            box-shadow: 0 0 30px $color-primary-dark inset;
+          }
+        }
+
+        &:hover {
+          @include palette('primary-light');
+        }
+
+        &:active {
+          @include palette('primary-light');
+          box-shadow: 0 0 30px $color-secondary-dark inset;
+        }
+      }
+    }
+  }
+}

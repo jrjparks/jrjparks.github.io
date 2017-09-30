@@ -1,0 +1,40 @@
+// _palette.scss
+
+$color-primary: #263238;
+$color-primary-light: #4f5b62;
+$color-primary-dark: #000a12;
+$color-primary-text: #fff;
+
+$color-secondary: #ff6d00;
+$color-secondary-light: #ff9e40;
+$color-secondary-dark: #c43c00;
+$color-secondary-text: #000;
+
+$palettes:(
+  primary: $color-primary,
+  primary-light: $color-primary-light,
+  primary-dark: $color-primary-dark,
+  primary-text: $color-primary-text,
+  secondary: $color-secondary,
+  secondary-light: $color-secondary-light,
+  secondary-dark: $color-secondary-dark,
+  secondary-text: $color-secondary-text,
+);
+
+%primary-text {
+  color: map-get($palettes, 'primary-text');
+}
+
+%secondary-text {
+  color: map-get($palettes, 'secondary-text');
+}
+
+@mixin palette($name: 'primary') {
+  $palette-name: $name;
+  $index : str-index($palette-name,  '-');
+  @if $index {
+    $palette-name: str-slice($palette-name, 1, $index - 1);
+  }
+  @extend %#{$palette-name}-text;
+  background-color: map-get($palettes, $name);
+}

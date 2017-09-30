@@ -1,0 +1,17 @@
+@import 'normalize';
+@include normalize();
+@import 'palette';
+@import 'typography';
+@import 'nav';
+@import 'view';
+
+* {
+  box-sizing: border-box;
+};
+
+body,
+html,
+main {
+  height: 100%;
+  width: 100%;
+};
