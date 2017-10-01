@@ -7,6 +7,9 @@ export class NavBar implements m.ClassComponent<{}> {
     return m("nav", m("ul", [{
       name: "Home",
       route: "/",
+    }, {
+      name: "Projects",
+      route: "/projects",
     }].map(({ name, route }) => m("li", m("a", {
       class: currentRoute === route ? "active" : "",
       href: route,

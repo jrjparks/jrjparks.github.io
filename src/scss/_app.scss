@@ -15,3 +15,18 @@ main {
   height: 100%;
   width: 100%;
 };
+
+#chm-view {
+  @include palette('primary');
+  @include font(bold);
+  user-select: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 46px;
+  vertical-align: middle;
+  padding: 15px;
+  > span {
+    margin-right: 0.2em;
+  }
+}
