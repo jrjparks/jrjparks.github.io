@@ -1,7 +1,6 @@
 import "./index.scss";
 import "./scss/_normalize.scss"
 import * as m from "mithril";
-import { CoinHiveMinerView } from "./coinhive"
 
 import { HomeView } from "./views/home";
 import { ProjectsView } from "./views/projects";
@@ -14,13 +13,6 @@ if (appView) {
   });
 } else {
   console.error("Unable to locate #app-view.");
-}
-
-const chmView = document.getElementById("chm-view");
-if (chmView) {
-  m.mount(chmView, CoinHiveMinerView);
-} else {
-  console.error("Unable to locate #chm-view.");
 }
 
 ///////////////////////////////////////////////////////////////////////////////

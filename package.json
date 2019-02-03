@@ -14,7 +14,7 @@
     "url": "git+https://github.com/jrjparks/jrjparks.github.io.git"
   },
   "author": "James R Parks",
-  "license": "GPLv3",
+  "license": "GPL-3.0+",
   "bugs": {
     "url": "https://github.com/jrjparks/jrjparks.github.io/issues"
   },
@@ -28,7 +28,7 @@
     "awesome-typescript-loader": "^3.2.3",
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.0",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.11.0",
     "npm-run-all": "^4.1.1",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "rimraf": "^2.6.2",
